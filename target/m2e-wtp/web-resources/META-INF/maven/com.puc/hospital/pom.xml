@@ -77,6 +77,14 @@
 					</excludes>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>com.heroku.sdk</groupId>
+				<artifactId>heroku-maven-plugin</artifactId>
+				<configuration>
+				  <appName>dry-taiga-94785</appName>
+				</configuration>
+				<version>2.0.8</version>
+			</plugin>
 		</plugins>
 	</build>
 
