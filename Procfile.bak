@@ -1,1 +1,1 @@
-web: java -Dserver.port=$PORT -jar target/HospitalPI.war
+web: java -Dserver.port=$PORT -jar target/HospitalPI.jar
