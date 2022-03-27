@@ -1,6 +1,6 @@
 java.runtime.version=11
 # Common properties spring
-server.port=8080
+server.port=${PORT:8080}
 
 # Producer properties
 spring.kafka.producer.bootstrap-servers=localhost:9093
