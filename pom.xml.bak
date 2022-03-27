@@ -11,11 +11,15 @@
 	<groupId>com.puc</groupId>
 	<artifactId>hospital</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>hospital</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
+		<failOnMissingWebXml>false</failOnMissingWebXml>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -83,7 +87,7 @@
 				<configuration>
 				  <appName>dry-taiga-94785</appName>
 				</configuration>
-				<version>2.0.8</version>
+				<version>2.0.10</version>
 			</plugin>
 		</plugins>
 		<finalName>HospitalPI</finalName>
