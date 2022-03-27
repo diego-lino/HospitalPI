@@ -1,1 +1,1 @@
-web: java -jar target/HospitalPI.war
+web: java -jar target\HospitalPI.war
