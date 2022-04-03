@@ -19,6 +19,10 @@ public class PacienteService {
 	@Autowired
 	private TopicProducer topicProducer;
 	
+//	@Autowired
+//	private TopicProducer topicProducer;
+	
+	
 	public List<Paciente> gerarListaPacientes(){
 		List<Paciente> listaPacientes = new LinkedList<Paciente>();
 		Paciente ultimoPaciente = null;
@@ -44,11 +48,11 @@ public class PacienteService {
 	
 	public void salvarPaciente(Paciente paciente) {
 		pacienteRepository.save(paciente);
-		enviaPacienteParaKafka(paciente);
+		enviaPacienteParaRabbitMQ(paciente);
 	}
 	
-	private void enviaPacienteParaKafka(Paciente paciente) {
-		topicProducer.send(paciente);
+	private void enviaPacienteParaRabbitMQ(Paciente paciente) {
+		topicProducer.publishMessage(paciente);
 	}
 
 	public List<Paciente> getAllPacientes() {
